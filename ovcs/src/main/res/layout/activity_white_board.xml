@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.oraycn.omcs.whiteboard.WhiteBoardConnector
+        android:id="@+id/whiteBoardConnector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </com.oraycn.omcs.whiteboard.WhiteBoardConnector>
+
+    <!--顶部右上角按钮-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/exitBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/exit_bg"/>
+
+        <ImageView
+            android:id="@+id/resetSizeBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/restore_canvas_bg"/>
+
+        <ImageView
+            android:id="@+id/gestureBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/curve_bg"/>
+
+        <ImageView
+            android:id="@+id/revokeBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chexiao_bg"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

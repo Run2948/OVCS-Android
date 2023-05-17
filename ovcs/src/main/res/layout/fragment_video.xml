@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.VideoFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/group_video_session"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_2">
+
+        <!--底部按钮 ffeeeeee-->
+
+        <!--对方视频画面-->  <!--<android.opengl.GLSurfaceView-->
+        <!--对方信息显示-->
+
+        <!--本地视频显示-->
+        <com.oraycn.ovcs.utils.AutoNewLineLayout
+
+            android:id="@+id/camera_container"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            >
+            <include android:id="@+id/group_camera_surfaceview_plus"
+                layout="@layout/camera_surface_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></include>
+
+        </com.oraycn.ovcs.utils.AutoNewLineLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/group_other_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/stateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="OMCS...."
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_bottom"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent">
+
+            <!--切换到静音-->
+            <Button
+                android:id="@+id/switch_to_mute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:text="静音"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/mute_bg" />
+            <!--免提-->
+            <Button
+                android:id="@+id/switch_to_Handsfree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:text="免提"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/hands_bg" />
+            <!--打开或关闭摄像头-->
+            <Button
+                android:id="@+id/switch_to_openCamera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:text="打开摄像头"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/video_bg" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent">
+            <!--切换到语音-->
+
+            <ImageView
+                android:id="@+id/group_switch_to_voice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:visibility="invisible"
+                android:src="@drawable/switchvoice" />
+            <!--挂断-->
+            <ImageView
+                android:id="@+id/group_hung_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/handsup" />
+            <!--切换摄像头-->
+            <ImageView
+                android:id="@+id/group_convert_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/flip_icon" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

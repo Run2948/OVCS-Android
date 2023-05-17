@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <RelativeLayout
+            android:id="@+id/btn_container_friend_list"
+            android:layout_width="0dp"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_video_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/tab_contact_list_bg"
+                android:onClick="onTabClicked"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_2"
+                android:scaleType="centerInside"
+                android:text="多人视频"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/friend_request_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_18"
+                android:minWidth="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_conversation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_groupChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/tab_chat_bg"
+                android:onClick="onTabClicked"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_2"
+                android:scaleType="fitCenter"
+                android:text="多人会话"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/unread_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_18"
+                android:minWidth="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_container_deskTop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_deskTop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/tab_org_bg"
+                android:onClick="onTabClicked"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_2"
+                android:scaleType="matrix"
+                android:text="共享桌面"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/deskTop_request_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btn_container_whiteBoard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_whiteBoard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_bottom_item_bg"
+                android:drawableTop="@drawable/tab_org_bg"
+                android:onClick="onTabClicked"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_2"
+                android:scaleType="matrix"
+                android:text="电子白板"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/whiteBoard_request_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/frame_bottom_separator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom"
+        android:src="@drawable/main_frame_bottom_separator"></ImageView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/frame_bottom_separator"
+        ></FrameLayout>
+
+
+</RelativeLayout>

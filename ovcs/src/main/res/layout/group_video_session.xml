@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_video_session"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!--对方视频画面-->  <!--<android.opengl.GLSurfaceView-->
+    <com.oraycn.omcs.core.OMCSSurfaceView
+        android:id="@+id/group_surface_remote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="center" />
+    <Button
+    android:id="@+id/buttonConnect"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="开始连接" />
+    <!--对方信息显示-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/group_other_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="OMCS...."
+            android:textColor="#ffffff"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!--本地视频显示-->
+    <FrameLayout
+        android:id="@+id/group_frame_local_area"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_gravity="top|right"
+        android:background="@drawable/video_bg2"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+        <com.oraycn.omcs.core.CameraSurfaceView
+            android:id="@+id/group_camera_surfaceview_local"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <!--底部按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="35dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+        <!--切换到语音-->
+        <ImageView
+            android:id="@+id/group_switch_to_voice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/switchvoice"/>
+        <!--挂断-->
+        <ImageView
+            android:id="@+id/group_hung_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/handsup"/>
+        <!--切换摄像头-->
+        <ImageView
+            android:id="@+id/group_convert_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/switchcamera"/>
+    </LinearLayout>
+
+</FrameLayout>

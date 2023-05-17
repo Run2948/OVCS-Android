@@ -1,0 +1,110 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@style/AppBaseTheme" />
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- toolbar颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 状态栏和标题栏颜色 -->
+        <item name="colorPrimaryDark">@color/s_bar</item>
+        <!-- 标题颜色 -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- 溢出菜单图标颜色 -->
+        <item name="colorControlNormal">@android:color/white</item>
+
+        <!-- 箭头 -->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- 溢出菜单文字颜色 -->
+        <item name="textAppearanceLargePopupMenu">@style/OverflowMenuTextAppearance</item>
+        <!-- 菜单项点击selector -->
+        <item name="actionBarItemBackground">@drawable/abc_item_background_holo_dark</item>
+    </style>
+    <!-- 左边的箭头指示 -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <!-- 溢出菜单文字样式 -->
+    <style name="OverflowMenuTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/overflowTextColor</item>
+    </style>
+
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+    <style name="nornal_style" parent="android:Theme.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="user_detail_des">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+
+    </style>
+
+    <!--
+    <style name="horizontal_slide2" parent="android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimFade2</item>
+    </style>
+    -->
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="MyAlertDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+
+    <style name="TabTitleText" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#b4b4b4</item>
+    </style>
+
+    <style name="TabMenuText" parent="@android:style/TextAppearance">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+</resources>
